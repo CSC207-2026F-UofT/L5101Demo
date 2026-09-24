@@ -8,6 +8,9 @@ public class Main {
     public static void main(String[] args) {
         List<Person> people = new ArrayList<>();
 
+        Person alice = new Student("Alice", 1234567890);
+        people.add(alice);
+
         try (Scanner scanner = new Scanner(System.in)) {
             while (true) {
                 String command = readCommand(scanner);
