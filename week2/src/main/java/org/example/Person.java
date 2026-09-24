@@ -1,16 +1,31 @@
 package org.example;
 
 public class Person {
-    public String name;
-    public int age;
+    private String name;
+    private int age;
 
-    public static int count = 0;
-    public static final int max = 67;
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
-    public static void main(String[] args) {
-        Person p = new Person();
-        System.out.println(p.name);
-        System.out.println(p.age);
-        System.out.println(p);
+    String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return this.name + " (age: " + age + ")";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Person)) {
+            return false;
+        }
+
+        Person other = (Person) obj;
+        return other.name.equals(name) && other.age == age;
+
     }
 }
