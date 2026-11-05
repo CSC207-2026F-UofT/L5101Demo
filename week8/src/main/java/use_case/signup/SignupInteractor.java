@@ -21,7 +21,7 @@ public class SignupInteractor implements SignupInputBoundary {
 
     @Override
     public void execute(SignupInputData signupInputData) {
-        System.out.println("SignupInteractor.execute called(), but doing nothing.");
+        /* Intentionally does not do anything */
     }
 
     @Override
